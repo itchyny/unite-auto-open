@@ -2,7 +2,7 @@
 " Filename: plugin/unite-auto_open.vim
 " Author: itchyny
 " License: MIT License
-" Last Change: 2013/10/31 01:16:35.
+" Last Change: 2014/03/16 00:03:08.
 " =============================================================================
 
 if exists('g:loaded_unite_auto_open')
@@ -29,9 +29,7 @@ function! s:unite_auto_open.func(candidates)
   endtry
 endfunction
 
-if exists('*unite#custom_action')
-  call unite#custom_action('file', 'auto_open', s:unite_auto_open)
-endif
+call unite#custom_action('file', 'auto_open', s:unite_auto_open)
 
 let g:unite_auto_open = s:unite_auto_open
 
