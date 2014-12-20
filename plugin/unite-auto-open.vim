@@ -2,12 +2,13 @@
 " Filename: plugin/unite-auto_open.vim
 " Author: itchyny
 " License: MIT License
-" Last Change: 2014/03/16 00:03:08.
+" Last Change: 2014/12/14 00:53:28.
 " =============================================================================
 
-if exists('g:loaded_unite_auto_open')
+if exists('g:loaded_unite_auto_open') || v:version < 700
   finish
 endif
+let g:loaded_unite_auto_open = 1
 
 let s:save_cpo = &cpo
 set cpo&vim
@@ -32,8 +33,6 @@ endfunction
 call unite#custom_action('file', 'auto_open', s:unite_auto_open)
 
 let g:unite_auto_open = s:unite_auto_open
-
-let g:loaded_unite_auto_open = 1
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
