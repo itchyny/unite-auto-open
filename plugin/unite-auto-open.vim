@@ -2,10 +2,10 @@
 " Filename: plugin/unite-auto_open.vim
 " Author: itchyny
 " License: MIT License
-" Last Change: 2014/12/14 00:53:28.
+" Last Change: 2015/02/15 09:08:41.
 " =============================================================================
 
-if exists('g:loaded_unite_auto_open') || v:version < 700
+if exists('g:loaded_unite_auto_open') || v:version < 703
   finish
 endif
 let g:loaded_unite_auto_open = 1
