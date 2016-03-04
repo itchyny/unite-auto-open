@@ -2,7 +2,7 @@
 " Filename: plugin/unite-auto_open.vim
 " Author: itchyny
 " License: MIT License
-" Last Change: 2015/02/15 09:08:41.
+" Last Change: 2016/03/04 09:02:38.
 " =============================================================================
 
 if exists('g:loaded_unite_auto_open') || v:version < 703
@@ -13,7 +13,7 @@ let g:loaded_unite_auto_open = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-let s:startfiletypes = '.*\.\(exe\|png\|gif\|jpg\|jpeg\|bmp\|eps\|tiff\|pdf\|mp3\|mp4\|avi\|mkv\)$'
+let s:startfiletypes = '\v.*\.(exe|png|gif|jpg|jpeg|bmp|eps|tiff|pdf|mp3|mp4|avi|mkv)$'
 
 let s:unite_auto_open = {
       \ 'description' : 'edit or open files',
